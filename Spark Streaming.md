@@ -59,3 +59,5 @@
 3. Stream Data: ต่อไปเราจะเพิ่มทวีตจากเซิร์ฟเวอร์ netcat จากพอร์ตที่กำหนดและ Spark Streaming API จะได้รับข้อมูลหลังจากระยะเวลาที่กำหนด
 
 4. Predict and Return Results: เมื่อเราได้รับข้อความ Tweets เราจะส่งข้อมูลไปยังขั้นตอนการเรียนรู้ของเครื่องที่เราสร้างขึ้นและส่งคืนความรู้สึกที่คาดการณ์จากแบบจำลอง
+
+https://github.com/Ninlawat-Ph/code/blob/master/Untitled.png
