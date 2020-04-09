@@ -101,8 +101,8 @@
 		         wordsDataFrame = spark.createDataFrame(rowRdd)
              # transform the data using the pipeline and get the predicted sentiment
 		         pipelineFit.transform(wordsDataFrame).select('tweet','prediction').show()
-	              except : 
-		                print('No data')
+	       except : 
+		      print('No data')
     
              # initialize the streaming context 
       ssc = StreamingContext(sc, batchDuration= 3)
@@ -121,5 +121,10 @@
 
              # Wait for the computation to terminate
       ssc.awaitTermination()  
+      
+   รันโปรแกรมในเทอร์มินัลเดียวและใช้ Netcat (เครื่องมือยูทิลิตี้ที่สามารถใช้ในการส่งข้อมูลไปยังชื่อโฮสต์และหมายเลขพอร์ตที่กำหนด) คุณสามารถเริ่มการเชื่อมต่อ TCP โดยใช้คำสั่งนี้:
+      nc -lk port_number
+    
+      
       
 
