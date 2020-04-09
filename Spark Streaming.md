@@ -105,21 +105,21 @@
 		                print('No data')
     
              # initialize the streaming context 
-           ssc = StreamingContext(sc, batchDuration= 3)
+      ssc = StreamingContext(sc, batchDuration= 3)
 
              # Create a DStream that will connect to hostname:port, like localhost:9991
-           lines = ssc.socketTextStream(sys.argv[1], int(sys.argv[2]))
+      lines = ssc.socketTextStream(sys.argv[1], int(sys.argv[2]))
 
              # split the tweet text by a keyword 'TWEET_APP' so that we can identify which set of words is from a single tweet
-           words = lines.flatMap(lambda line : line.split('TWEET_APP'))
+      words = lines.flatMap(lambda line : line.split('TWEET_APP'))
 
              # get the predicted sentiments for the tweets received
-           words.foreachRDD(get_prediction)
+      words.foreachRDD(get_prediction)
 
              # Start the computation
-           ssc.start()             
+      ssc.start()             
 
              # Wait for the computation to terminate
-           ssc.awaitTermination()  
+      ssc.awaitTermination()  
       
 
