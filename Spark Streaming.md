@@ -68,14 +68,14 @@
 
 ![Push up to github](https://cdn.analyticsvidhya.com/wp-content/uploads/2019/12/pipeline_streaming.png)
 
-     # define stage 1: tokenize the tweet text    
-     stage_1 = RegexTokenizer(inputCol= 'tweet' , outputCol= 'tokens', pattern= '\\W')
-     # define stage 2: remove the stop words
-     stage_2 = StopWordsRemover(inputCol= 'tokens', outputCol= 'filtered_words')
-     # define stage 3: create a word vector of the size 100
-     stage_3 = Word2Vec(inputCol= 'filtered_words', outputCol= 'vector', vectorSize= 100)
-     # define stage 4: Logistic Regression Model
-     model = LogisticRegression(featuresCol= 'vector', labelCol= 'label')
+       # define stage 1: tokenize the tweet text    
+       stage_1 = RegexTokenizer(inputCol= 'tweet' , outputCol= 'tokens', pattern= '\\W')
+       # define stage 2: remove the stop words
+       stage_2 = StopWordsRemover(inputCol= 'tokens', outputCol= 'filtered_words')
+       # define stage 3: create a word vector of the size 100
+       stage_3 = Word2Vec(inputCol= 'filtered_words', outputCol= 'vector', vectorSize= 100)
+       # define stage 4: Logistic Regression Model
+       model = LogisticRegression(featuresCol= 'vector', labelCol= 'label')
 
 #### Setup our Machine Learning Pipeline
 - เพิ่มขั้นตอนในวัตถุ Pipeline  แล้วเราจะทำการแปลงตามลำดับ ติดตั้ง Pipeline  กับชุดข้อมูลการฝึกอบรมและตอนนี้เมื่อใดก็ตามที่เรามี Tweets ใหม่เราเพียงแค่ต้องส่งผ่านวัตถุ Tweets และแปลงข้อมูลเพื่อรับการคาดการณ์
@@ -85,4 +85,41 @@
 
        #fit the pipeline model with the training data
        pipelineFit = pipeline.fit(my_data)
+      
+#### Stream Data and Return Results
+
+- สมมติว่าเราได้รับความคิดเห็นนับร้อยต่อวินาทีและเราปิดกั้นผู้ใช้ที่โพสต์ความคิดเห็นที่มีคำพูดแสดงความเกลียดชัง ดังนั้นเมื่อใดก็ตามที่เราได้รับข้อความใหม่เราจะส่งสิ่งนั้นเข้าไปใน Pipeline  และรับความรู้สึกที่คาดการณ์ไว้ เราจะกำหนดฟังก์ชั่น get_prediction ซึ่งจะลบประโยคว่างและสร้างดาต้าเฟรมที่แต่ละแถวมีทวีต ดังนั้นเริ่มต้นบริบท Spark Streaming และกำหนดระยะเวลาแบทช์ 3 วินาที ซึ่งหมายความว่าเราจะทำการคาดการณ์ข้อมูลที่เราได้รับทุก 3 วินาที
+
+# define a function to compute sentiments of the received tweets
+       def get_prediction(tweet_text):
+	       try:
+             # filter the tweets whose length is greater than 0
+		         tweet_text = tweet_text.filter(lambda x: len(x) > 0)
+             # create a dataframe with column name 'tweet' and each row will contain the tweet
+		         rowRdd = tweet_text.map(lambda w: Row(tweet=w))
+             # create a spark dataframe
+		         wordsDataFrame = spark.createDataFrame(rowRdd)
+             # transform the data using the pipeline and get the predicted sentiment
+		         pipelineFit.transform(wordsDataFrame).select('tweet','prediction').show()
+	              except : 
+		                print('No data')
+    
+             # initialize the streaming context 
+           ssc = StreamingContext(sc, batchDuration= 3)
+
+             # Create a DStream that will connect to hostname:port, like localhost:9991
+           lines = ssc.socketTextStream(sys.argv[1], int(sys.argv[2]))
+
+             # split the tweet text by a keyword 'TWEET_APP' so that we can identify which set of words is from a single tweet
+           words = lines.flatMap(lambda line : line.split('TWEET_APP'))
+
+             # get the predicted sentiments for the tweets received
+           words.foreachRDD(get_prediction)
+
+             # Start the computation
+           ssc.start()             
+
+             # Wait for the computation to terminate
+           ssc.awaitTermination()  
+      
 
