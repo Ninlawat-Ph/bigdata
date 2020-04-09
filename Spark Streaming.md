@@ -60,4 +60,4 @@
 
 4. Predict and Return Results: เมื่อเราได้รับข้อความ Tweets เราจะส่งข้อมูลไปยังขั้นตอนการเรียนรู้ของเครื่องที่เราสร้างขึ้นและส่งคืนความรู้สึกที่คาดการณ์จากแบบจำลอง
 
-https://github.com/Ninlawat-Ph/code/blob/master/Untitled.png
+(https://github.com/Ninlawat-Ph/code/blob/master/Untitled.png)
