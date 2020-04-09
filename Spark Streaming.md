@@ -68,6 +68,15 @@
 
 ![Push up to github](https://cdn.analyticsvidhya.com/wp-content/uploads/2019/12/pipeline_streaming.png)
 
+     # define stage 1: tokenize the tweet text    
+     stage_1 = RegexTokenizer(inputCol= 'tweet' , outputCol= 'tokens', pattern= '\\W')
+     # define stage 2: remove the stop words
+     stage_2 = StopWordsRemover(inputCol= 'tokens', outputCol= 'filtered_words')
+     # define stage 3: create a word vector of the size 100
+     stage_3 = Word2Vec(inputCol= 'filtered_words', outputCol= 'vector', vectorSize= 100)
+     # define stage 4: Logistic Regression Model
+     model = LogisticRegression(featuresCol= 'vector', labelCol= 'label')
+
 #### Setup our Machine Learning Pipeline
 - เพิ่มขั้นตอนในวัตถุ Pipeline  แล้วเราจะทำการแปลงตามลำดับ ติดตั้ง Pipeline  กับชุดข้อมูลการฝึกอบรมและตอนนี้เมื่อใดก็ตามที่เรามี Tweets ใหม่เราเพียงแค่ต้องส่งผ่านวัตถุ Tweets และแปลงข้อมูลเพื่อรับการคาดการณ์
      
