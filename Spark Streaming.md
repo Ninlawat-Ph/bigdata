@@ -48,3 +48,5 @@
 6. Broadcast Variable
    Broadcast Variable อนุญาตให้โปรแกรมเมอร์เก็บตัวแปรแคชแบบอ่านอย่างเดียวในแต่ละเครื่อง โดยปกติ Spark จะกระจาย Broadcast Variable โดยอัตโนมัติโดยใช้อัลกอริธึมการ Broadcast ที่มีประสิทธิภาพ แต่เรายังสามารถกำหนดได้หากเรามีงานที่ต้องใช้ข้อมูลเดียวกันหลายขั้นตอน
   
+#### Understanding the Problem Statement
+
