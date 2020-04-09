@@ -71,9 +71,9 @@
 #### Setup our Machine Learning Pipeline
 - เพิ่มขั้นตอนในวัตถุ Pipeline  แล้วเราจะทำการแปลงตามลำดับ ติดตั้ง Pipeline  กับชุดข้อมูลการฝึกอบรมและตอนนี้เมื่อใดก็ตามที่เรามี Tweets ใหม่เราเพียงแค่ต้องส่งผ่านวัตถุ Tweets และแปลงข้อมูลเพื่อรับการคาดการณ์
      
-     #setup the pipeline
-     pipeline = Pipeline(stages= [stage_1, stage_2, stage_3, model])
+       #setup the pipeline
+       pipeline = Pipeline(stages= [stage_1, stage_2, stage_3, model])
 
-     #fit the pipeline model with the training data
-     pipelineFit = pipeline.fit(my_data)
+       #fit the pipeline model with the training data
+       pipelineFit = pipeline.fit(my_data)
 
