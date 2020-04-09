@@ -74,6 +74,6 @@
      #setup the pipeline
      pipeline = Pipeline(stages= [stage_1, stage_2, stage_3, model])
 
-     # fit the pipeline model with the training data
+     #fit the pipeline model with the training data
      pipelineFit = pipeline.fit(my_data)
 
