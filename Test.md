@@ -14,4 +14,12 @@ you use command: vi sentiment_analysis_streaming.py pass code python in this
 
 #### Command to test
 
+Open two session 
+
+first session
+
+nc –lk 4321
+
+
 python3 /opt/spark/sentiment_analysis_streaming.py localhost 4321
+
