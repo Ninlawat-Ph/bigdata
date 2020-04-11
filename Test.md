@@ -9,3 +9,5 @@ wget 'https://raw.githubusercontent.com/lakshay-arora/PySpark/master/spark_strea
 #### Create file python sentiment_analysis_streaming.py
 
 https://github.com/lakshay-arora/PySpark/blob/master/spark_streaming/twitter_sentiment_analysis.py
+
+you use command: vi sentiment_analysis_streaming.py pass code python in this
