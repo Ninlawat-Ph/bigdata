@@ -20,6 +20,7 @@ Open two session
 
        run command:    nc –lk 4321
 
+- second session
 
-python3 /opt/spark/sentiment_analysis_streaming.py localhost 4321
+       run command:    python3 /opt/spark/sentiment_analysis_streaming.py localhost 4321
 
