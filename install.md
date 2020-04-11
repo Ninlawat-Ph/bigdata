@@ -36,3 +36,9 @@ export PATH=$PATH:$SPARK_HOME/bin
 echo 'export SPARK_HOME=/opt/spark' >> .bash_profile
 
 echo 'export PATH=$PATH:$SPARK_HOME/bin' >> .bash_profile
+
+cd spark
+
+## Start Spark
+
+./sbin/start-master.sh
