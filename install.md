@@ -71,3 +71,9 @@ path : /usr/bin
 
 ln -s /usr/bin/python3.6 /usr/bin/python
 
+# Install pyspark
+
+pip3 install pyspark
+
+
+
