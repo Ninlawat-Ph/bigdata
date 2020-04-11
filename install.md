@@ -1,3 +1,5 @@
+# Is a way to install spark stand alone
+
 ## Install JAVA
 
 yum -y update
@@ -47,4 +49,4 @@ cd spark
 
 https://blog.devolutions.net/2017/04/how-to-configure-an-ssh-tunnel-on-putty
 
-After you tunnels and then can access to http://localhost:8080/ 
+After you tunnels and then can access to http://localhost:8080/  
