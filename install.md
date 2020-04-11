@@ -75,5 +75,7 @@ ln -s /usr/bin/python3.6 /usr/bin/python
 
 pip3 install pyspark
 
+## Install numpy 
 
+pip3 install numpy
 
