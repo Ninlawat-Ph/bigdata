@@ -12,6 +12,6 @@ https://github.com/lakshay-arora/PySpark/blob/master/spark_streaming/twitter_sen
 
 you use command: vi sentiment_analysis_streaming.py pass code python in this
 
-## Command to test
+#### Command to test
 
 python3 /opt/spark/sentiment_analysis_streaming.py localhost 4321
