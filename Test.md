@@ -20,7 +20,7 @@ Open two session
 
        run command:    nc –lk 4321
 
-- second session (before you run command need to tunnels prot what you want test)
+- second session (Before you run command need to tunnels prot what you want test)
 
        run command:    python3 /opt/spark/sentiment_analysis_streaming.py localhost 4321
 
