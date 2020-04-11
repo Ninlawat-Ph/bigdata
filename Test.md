@@ -16,11 +16,11 @@ you use command: vi sentiment_analysis_streaming.py pass code python in this
 
 Open two session 
 
-- first session
+- First session
 
        run command:    nc –lk 4321
 
-- second session (Before you run command need to tunnels prot what you want test)
+- Second session (Before you run command need to tunnels prot what you want test)
 
        run command:    python3 /opt/spark/sentiment_analysis_streaming.py localhost 4321
 
