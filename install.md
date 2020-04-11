@@ -50,3 +50,7 @@ cd spark
 https://blog.devolutions.net/2017/04/how-to-configure-an-ssh-tunnel-on-putty
 
 After you tunnels and then can access to http://localhost:8080/  
+
+## Install netcat 
+
+yum install nc
