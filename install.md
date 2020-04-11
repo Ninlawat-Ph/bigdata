@@ -45,5 +45,6 @@ cd spark
 
 ## putty tunnels
 
-1.Set Public Network ip:
+https://blog.devolutions.net/2017/04/how-to-configure-an-ssh-tunnel-on-putty
+
 
