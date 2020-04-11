@@ -16,7 +16,7 @@ you use command: vi sentiment_analysis_streaming.py pass code python in this
 
 Open two session 
 
-first session
+- first session
 
 nc –lk 4321
 
