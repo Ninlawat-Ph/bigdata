@@ -42,3 +42,8 @@ cd spark
 ## Start Spark
 
 ./sbin/start-master.sh
+
+## putty tunnels
+
+1.Set Public Network ip:
+
