@@ -54,3 +54,15 @@ After you tunnels and then can access to http://localhost:8080/
 ## Install netcat 
 
 yum install nc
+
+## Install Python
+
+python --version
+
+yum install -y python36u
+
+## Change config python to python 3.6 (If version python below 3)
+
+Go to this path ‘usr/bin/python’
+
+You see python -> python2.7 old version need to change to python3.6 
