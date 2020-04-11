@@ -61,8 +61,13 @@ python --version
 
 yum install -y python36u
 
-## Change config python to python 3.6 (If version python below 3)
+## Change config python to python 3.6 (If version python below version 3)
 
 Go to this path ‘usr/bin/python’
 
 You see python -> python2.7 old version need to change to python3.6 
+
+path : /usr/bin
+
+ln -s /usr/bin/python3.6 /usr/bin/python
+
