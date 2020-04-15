@@ -16,9 +16,7 @@
 #### Fundamentals of Spark Streaming
 - Spark Streaming เป็นส่วนเสริมของ Core Spark API ที่ช่วยให้สามารถประมวลผลสตรีมข้อมูลล่าสุดที่ปรับขนาดได้และไม่ผิดพลาดมาทำความเข้าใจกับองค์ประกอบต่าง ๆ ของ Spark Streaming
 1. Discretized Streams
- Discretized Streams, or DStreams, represent a continuous stream of data ขั้นตอนแรกของการสร้างแอพพลิเคชั่นสตรีมมิ่งคือการกำหนดระยะเวลาแบทช์สำหรับ  แหล่งข้อมูลที่เรารวบรวมข้อมูล หากระยะเวลาแบทช์คือ 2 วินาทีข้อมูลจะถูกเก็บรวบรวมทุก  2 วินาทีและเก็บไว้ใน RDD และสายโซ่ของซีรีย์ต่อเนื่องของ RDD เหล่านี้คือ DStream  ซึ่งไม่เปลี่ยนรูปและสามารถใช้เป็นชุดข้อมูลแบบ distribution โดย Spark ##
- 
-ในระหว่างขั้นตอนการประมวลผลข้อมูลล่วงหน้าเรา จำเป็นต้อง  transform variables, including converting categorical ones into numeric, creating        bins ลบค่าผิดปกติ Spark เก็บข้อมูลประวัติการ transformations ที่เรากำหนดไว้ในข้อมูลใดๆ ดังนั้นเมื่อใดก็ตามที่มีความผิดพลาดเกิดขึ้นมันสามารถย้อนเส้นทางของ         transformations และการสร้างผลลัพธ์ที่คำนวณใหม่อีกครั้ง
+ Discretized Streams, or DStreams, represent a continuous stream of data ขั้นตอนแรกของการสร้างแอพพลิเคชั่นสตรีมมิ่งคือการกำหนดระยะเวลาแบทช์สำหรับ  แหล่งข้อมูลที่เรารวบรวมข้อมูล หากระยะเวลาแบทช์คือ 2 วินาทีข้อมูลจะถูกเก็บรวบรวมทุก  2 วินาทีและเก็บไว้ใน RDD และสายโซ่ของซีรีย์ต่อเนื่องของ RDD เหล่านี้คือ DStream  ซึ่งไม่เปลี่ยนรูปและสามารถใช้เป็นชุดข้อมูลแบบ distribution โดย Spark ในระหว่างขั้นตอนการประมวลผลข้อมูลล่วงหน้าเรา จำเป็นต้อง  transform variables, including converting categorical ones into numeric, creating        bins ลบค่าผิดปกติ Spark เก็บข้อมูลประวัติการ transformations ที่เรากำหนดไว้ในข้อมูลใดๆ ดังนั้นเมื่อใดก็ตามที่มีความผิดพลาดเกิดขึ้นมันสามารถย้อนเส้นทางของ         transformations และการสร้างผลลัพธ์ที่คำนวณใหม่อีกครั้ง
 
 
 ![Push up to github](https://cdn.analyticsvidhya.com/wp-content/uploads/2019/12/Screenshot-from-2019-12-04-16-27-27.png)
