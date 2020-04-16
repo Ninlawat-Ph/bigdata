@@ -6,3 +6,5 @@
 Apache Spark เป็น open-source cluster computing framework สำหรับ real-time data processing. ประสิทธิภาพจะเร็วขึ้น 100 เท่าในหน่วยความจำและเร็วกว่าดิสก์ 10 เท่าเมื่อเปรียบเทียบกับ Hadoop  มีลักษณะเป็น in-memory cluster computing และ data parallelism and fault tolerance
 
 ## Spark its Features
+
+![Push up to github](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/09/Picture5-2-768x408.png)
