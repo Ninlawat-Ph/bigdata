@@ -51,4 +51,17 @@ Apache Spark Architecture ตั้งอยู่บนพื้นฐานห
 - Spark Streaming
 
      Spark Streaming เป็นส่วนประกอบของ Spark ซึ่งใช้ในการประมวลผลข้อมูลการสตรีมแบบเรียลไทม์ ดังนั้นจึงเป็นประโยชน์เพิ่มเติมจาก Core Spark API มันช่วยให้        high-throughput และ fault-tolerant การประมวลผลสตรีมของสตรีมข้อมูลสด
+     
+## Resilient Distributed Dataset(RDD)
+
+RDDs เป็นหน่วยการสร้างของแอปพลิเคชัน Spark ใด ๆ RDDs ย่อมาจาก:
+
+Resilient: Fault tolerant และสามารถสร้างข้อมูลใหม่ได้เมื่อเกิดข้อผิดพลาด
+Distributed: กระจายข้อมูลระหว่างหลายโหนดในคลัสเตอร์
+Dataset: การรวบรวมข้อมูลที่แบ่งพาร์ติชันด้วยค่า
+
+
+
+
+
       
