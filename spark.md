@@ -22,4 +22,16 @@ Apache Spark เป็น open-source cluster computing framework สำหร�
 
   มันสามารถปรับใช้ผ่าน Mesos, Hadoop via YARN, or Spark’s own cluster manager
   
+- Real-Time
+
+  มีการ Real-time computation  และ low latency เนื่องจาก in-memory computation.
+  
+- Polyglot
+
+  Spark มี API ระดับสูงใน Java, Scala, Python และ R. Spark code สามารถเขียนได้ในสี่ภาษาเหล่านี้และยังมี shell ใน Scala และ Python 
+  
+## Spark Architecture Overview
+  
+
+  
  
