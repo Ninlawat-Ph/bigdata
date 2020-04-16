@@ -47,3 +47,8 @@ Apache Spark Architecture ตั้งอยู่บนพื้นฐานห
 - Spark Core
 
      Spark Core เป็นเครื่องมือพื้นฐานสำหรับการประมวลผลข้อมูลแบบขนานและขนาดใหญ่ นอกจากนี้ยังมี libraries ที่สร้างขึ้น on top of core งานที่หลากหลายสำหรับ      streaming, SQL, และ machine learning และทำหน้าที่ รับผิดชอบการจัดการหน่วยความจำ การกู้คืนข้อผิดพลาด (fault recovery), scheduling ,                distributing และการตรวจสอบงานในคลัสเตอร์และการโต้ตอบกับระบบจัดเก็บข้อมูล
+     
+- Spark Streaming
+
+     Spark Streaming เป็นส่วนประกอบของ Spark ซึ่งใช้ในการประมวลผลข้อมูลการสตรีมแบบเรียลไทม์ ดังนั้นจึงเป็นประโยชน์เพิ่มเติมจาก Core Spark API มันช่วยให้        high-throughput และ fault-tolerant การประมวลผลสตรีมของสตรีมข้อมูลสด
+      
