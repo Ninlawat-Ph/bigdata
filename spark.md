@@ -36,4 +36,4 @@ Apache Spark Architecture ตั้งอยู่บนพื้นฐานห
   
 
   
- 
+ ![Push up to github](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/09/2018-09-28-18_12_51-Apache-Spark-Architecture-_-Understanding-the-Spark-Components-_-Edureka.png)
