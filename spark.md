@@ -79,6 +79,13 @@ RDD ดำเนินการสองประเภท:
    ![Push up to github](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/09/Picture1-5-768x266.png)
 
 
+# Working of Spark Architecture
 
+ใน master node มี driver program คุณสามารถเขียนโปรแกรมสั่ง driver program หรือ ถ้าคุณใช้ interactive shell . Shell นั้น ก็ทำหน้าที่เป็น driver program ภายใน driver program ลำดับแรก คุณสร้าง spark context เปรียบเสมือน geteway คล้ายกับการเชื่อมต่อฐานข้อมูลของคุณ คำสั่งใดๆ ที่คุณดำเนินการต้องผ่านการเชื่อมต่อข้อมูล คล้ายกัน ทุกสิ่งที่ทำบน spark ต้องผ่าน spark context
 
+![Push up to github](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/09/Picture6-2-768x447.png)
+
+ spark context ทำงานกับ cluster manager เพื่อจัดการงานต่างๆ โดย driver program และ spark context ดูแลเรื่อง job execution ภายใน cluster โดย job หนึ่ง job จะถูก แตกออกเป็นหลายๆ task ซึ่งกระจายอยู่บน worker node ตลอดเวลา RDD จะถูกสร้าง ใน spark context มันสามารถกระจายข้าม node ต่างๆ และสามารถ cached ได้อีกด้วย
+ 
+ worker nodes (slave nodes) ทำหน้าที่ execute tasks โดย task เหล่านี้จะถุกดำเนินการบน RDD ที่แบ่งพาร์ติชันแล้วใน worker node ดังนั้นผลลัพธ์จะถูกส่งกลับที่ spark context
     
