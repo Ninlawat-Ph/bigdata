@@ -74,8 +74,6 @@ RDD ดำเนินการสองประเภท:
 
 2. Actions: สั่งให้ Apache Spark ใช้การคำนวณและส่งผลลัพธ์กลับไปที่ไดรเวอร์
 
-   ![Push up to github](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/09/Picture1-5-768x266.png)
-
 
 # Working of Spark Architecture
 
