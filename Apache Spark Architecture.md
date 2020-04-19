@@ -40,7 +40,7 @@ Apache Spark Architecture ตั้งอยู่บนพื้นฐานห
  
 ## Spark Eco-System
 
-   spark ประกอบด้วยส่วนประกอบต่าง ๆ เช่น Spark SQL, Spark Streaming, MLlib, GraphX และส่วนประกอบ Core API
+   spark ประกอบด้วยส่วนประกอบต่าง ๆ เช่น Spark SQL, Spark Streaming, MLlib, GraphX และส่วนประกอบ Core API ยกตัวอย่างเช่น
 
 - Spark Core
 
