@@ -42,8 +42,6 @@ Apache Spark Architecture ตั้งอยู่บนพื้นฐานห
 
    spark ประกอบด้วยส่วนประกอบต่าง ๆ เช่น Spark SQL, Spark Streaming, MLlib, GraphX และส่วนประกอบ Core API
 
- ![Push up to github](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/09/001-768x583.png)
-
 - Spark Core
 
      Spark Core เป็นเครื่องมือพื้นฐานสำหรับการประมวลผลข้อมูลแบบขนานและขนาดใหญ่ นอกจากนี้ยังมี libraries ที่สร้างขึ้น on top of core งานที่หลากหลายสำหรับ      streaming, SQL, และ machine learning และทำหน้าที่ รับผิดชอบการจัดการหน่วยความจำ การกู้คืนข้อผิดพลาด (fault recovery), scheduling ,                distributing และการตรวจสอบงานในคลัสเตอร์และการโต้ตอบกับระบบจัดเก็บข้อมูล
