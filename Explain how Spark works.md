@@ -47,7 +47,7 @@
 
 #### Defining the Stages of our Machine Learning Pipeline
 - ตอนนี้เรามีข้อมูลใน Spark dataframe แล้วเราต้องกำหนด stage ต่าง ๆ ที่เราต้องการแปลงข้อมูลจากนั้นใช้มันเพื่อรับ label ที่ถูกทำนายจากโมเดลของเรา
-ใน stage แรกเราจะใช้ RegexTokenizer เพื่อแปลงข้อความ Tweets เป็นรายการของคำ จากนั้นเราจะลบคำหยุดออกจาก word list และ word vectors ในขั้นตอนสุดท้ายเราจะใช้คำว่าเวกเตอร์เหล่านี้เพื่อสร้างแบบจำลองการถดถอยโลจิสติกส์(logistic regression model)และรับความรู้สึกที่ทำนายไว้
+ใน stage แรกเราจะใช้ RegexTokenizer เพื่อแปลงข้อความ Tweets เป็นรายการของคำ จากนั้น remove stopword ออกจาก word list และ word vectors ในขั้นตอนสุดท้ายเราจะใช้คำว่าเวกเตอร์เหล่านี้เพื่อสร้างแบบจำลองการถดถอยโลจิสติกส์(logistic regression model)และรับความรู้สึกที่ทำนายไว้
 
 ![Push up to github](https://cdn.analyticsvidhya.com/wp-content/uploads/2019/12/pipeline_streaming.png)
 
@@ -61,7 +61,7 @@
        model = LogisticRegression(featuresCol= 'vector', labelCol= 'label')
 
 #### Setup our Machine Learning Pipeline
-- เพิ่มขั้นตอนในวัตถุ Pipeline  แล้วเราจะทำการแปลงตามลำดับ ติดตั้ง Pipeline  กับชุดข้อมูลการฝึกอบรมและตอนนี้เมื่อใดก็ตามที่เรามี Tweets ใหม่เราเพียงแค่ต้องส่งผ่านวัตถุ Tweets และแปลงข้อมูลเพื่อรับการคาดการณ์
+- เราลำดับการทำงานโดยใช้ Pipeline  กับชุดข้อมูลการฝึกอบรมและตอนนี้เมื่อใดก็ตามที่เรามี Tweets ใหม่เราเพียงแค่ต้องส่งผ่านวัตถุ Tweets และแปลงข้อมูลเพื่อ prediction
      
        #setup the pipeline
        pipeline = Pipeline(stages= [stage_1, stage_2, stage_3, model])
