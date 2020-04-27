@@ -30,6 +30,9 @@ Apache Spark เป็น open-source cluster computing framework สำหร�
 
   Spark มี API ระดับสูงใน Java, Scala, Python และ R. Spark code สามารถเขียนได้ในสี่ภาษาเหล่านี้และยังมี shell ใน Scala และ Python 
   
+- Scalable
+
+
 ## Spark Architecture Overview
 
 Apache Spark Architecture ตั้งอยู่บนพื้นฐานหลักสองประการ: Resilient Distributed Dataset (RDD), Directed Acyclic Graph (DAG)
