@@ -73,6 +73,8 @@
 	# print the schema of the file
 	my_data.printSchema()
 
+![Push up to github](https://cdn.analyticsvidhya.com/wp-content/uploads/2019/12/data_head.png)
+
 #### Defining the Stages of our Machine Learning Pipeline
 - ตอนนี้เรามีข้อมูลใน Spark dataframe แล้วเราต้องกำหนด stage ต่าง ๆ ที่เราต้องการแปลงข้อมูลจากนั้นใช้มันเพื่อรับ label ที่ถูกทำนายจากโมเดลของเรา
 ใน stage แรกเราจะใช้ RegexTokenizer เพื่อแปลงข้อความ Tweets เป็นรายการของคำ จากนั้น remove stopword ออกจาก word list และ word vectors ในขั้นตอนสุดท้ายเราจะใช้คำว่าเวกเตอร์เหล่านี้เพื่อสร้างแบบจำลองการถดถอยโลจิสติกส์(logistic regression model)และทำนายค่าผลลัพธ์ออกมา
